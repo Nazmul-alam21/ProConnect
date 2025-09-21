@@ -1,0 +1,66 @@
+POST http://localhost:9080/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "sarah_21",
+    "password": "sarah",
+    "email": "sarah@gmail.com",
+    "name": "Sarah"
+}
+
+###
+
+POST http://localhost:9080/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "sarah@gmail.com",
+    "password": "sarah"
+}
+
+###
+
+POST http://localhost:9080/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "nazmul@gmail.com",
+    "password": "nazmul"
+}
+
+###
+GET http://localhost:9080/get_user_and_profile
+Content-Type: application/json
+
+{
+    "token": "5f179d364563aa57cce85adf7b0f179e3b7fdce1a2ad4ab387af3eba7c183ec1"
+}
+
+###
+
+POST http://localhost:9080/update_profile_data
+Content-Type: application/json
+
+{
+    "token": "5f179d364563aa57cce85adf7b0f179e3b7fdce1a2ad4ab387af3eba7c183ec1",
+    "bio": "Hi I am Nazmul, I am from Mumbai, I work in XYZ company",
+    "currentPost": "CTO",
+    "pastWork": [
+        {
+            "company": "Microsoft",
+            "position": "CTO",
+            "years": "2+"
+        }
+    ],
+    "education": [
+        {
+            "school": "IIIT",
+            "degree": "BSc IT",
+            "fieldOfStudy": "2023-2026"
+        }
+    ]
+}
+
+### 
+
+GET http://localhost:9080//user/get_all_users
